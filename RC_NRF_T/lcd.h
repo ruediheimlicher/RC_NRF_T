@@ -54,7 +54,7 @@
 //   defines fuer Teensy3.2:
 #define LCD_RSDS_PIN            22
 #define LCD_ENABLE_PIN          21
-#define LCD_CLOCK_PIN           20
+#define LCD_CLOCK_PIN           21
 
 #define HIGH   1
 #define LOW 0

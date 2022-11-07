@@ -351,9 +351,8 @@ void LCD_init(void)
 void ADC_init(void) 
 {
    batteriespannung=0; // 
-   
    adc->adc0->setAveraging(4); // set number of averages 
-   adc->adc0->setResolution(10); // set bits of resolution
+   adc->adc0->setResolution(8); // set bits of resolution
    adc->adc0->setConversionSpeed(ADC_CONVERSION_SPEED::LOW_SPEED);
    adc->adc0->setSamplingSpeed(ADC_SAMPLING_SPEED::MED_SPEED);
    adc->adc0->setReference(ADC_REFERENCE::REF_3V3);
@@ -394,7 +393,7 @@ void setup()
  //  analogWriteResolution(16); // 32767
    
    //SPI_Init();
-   
+   NRF_init() ;
    data.lxAxisValue = 127;
    data.lyAxisValue = 127;
    data.rxAxisValue = 127;
@@ -407,6 +406,9 @@ void setup()
    data.switch4Value = 1;  
 
    uint16_t nrfcounter = 0;
+   
+   pinMode(LX_PIN, INPUT);
+   pinMode(LY_PIN, INPUT);
    //NRF_init();
    
    // Define the radio communication
@@ -431,10 +433,16 @@ void setup()
    if ( radio.available() )
    {
       Serial.println("radio OK");
+      radio.openWritingPipe(address);
+      radio.setAutoAck(false);
+      radio.setDataRate(RF24_250KBPS);
+      radio.setPALevel(RF24_PA_LOW);
+
    }
    else
    {
       Serial.println("No radio available");
+
    }
    
    paketTimer.begin(pakettimerfunction,timerintervall);
@@ -451,7 +459,7 @@ void setup()
    Serial.println(F("RawHID RC_NRF"));
  
     
-   LCD_init();
+   //LCD_init();
    
    
    mcp0.begin();
@@ -471,7 +479,7 @@ void setup()
    mcp0.gpioPort(0xCC33);
 
    
-   EEPROM.begin();
+   //EEPROM.begin();
     
    delay(100);
    usbtask = 0;
@@ -480,6 +488,7 @@ void setup()
    adressearray[2] = LO;
    adressearray[3] = OPEN;
    
+   /*
    speed = 0;
    Serial.print("speed: ");
    Serial.print(speed);
@@ -512,11 +521,11 @@ void setup()
       }
       Serial.print("\n");
    }
- 
+    */
    aktualcommand = OPEN;
    
    
-   lcd_initialize(LCD_FUNCTION_8x2, LCD_CMD_ENTRY_INC, LCD_CMD_ON);
+   //lcd_initialize(LCD_FUNCTION_8x2, LCD_CMD_ENTRY_INC, LCD_CMD_ON);
    _delay_ms(100);
    lcd_puts("Teensy");
 
@@ -536,15 +545,25 @@ void setup()
 void loop()
 {
 #pragma mark mcp
-   if (sincemcp > 10)
+   if (sincemcp > 100)
    {
       sincemcp = 0;
          
       // Pot auslesen
-      data.lxAxisValue = map(adc->analogRead(LX_PIN),0, 1023, 0, 255);
-      data.lyAxisValue = adc->analogRead(LY_PIN);
-      data.rxAxisValue = adc->analogRead(RX_PIN);
-      data.ryAxisValue = adc->analogRead(RY_PIN);
+      //data.lxAxisValue = map(adc->analogRead(LX_PIN),0, 1023, 0, 255);
+      data.lxAxisValue = adc->adc0->analogRead(LX_PIN);
+      data.lyAxisValue = adc->adc0->analogRead(LY_PIN);
+      data.rxAxisValue = adc->adc0->analogRead(RX_PIN);
+      data.ryAxisValue = adc->adc0->analogRead(RY_PIN);
+      
+      Serial.print("lx: ");
+      //int value = adc->adc0->analogRead(20);
+      Serial.print(data.lxAxisValue);
+      Serial.print(" ly: ");
+      Serial.println(data.lyAxisValue);
+      //uint16_t lx = analogRead(LX_PIN);
+      //Serial.print("lx 2: ");
+      //Serial.println(lx);
       
       
       for (uint8_t i=0;i<ANZKANAL;i++)

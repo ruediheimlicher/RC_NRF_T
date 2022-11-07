@@ -1,0 +1,933 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BD7DDE7E22DBA580005F1405 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BD7DDE7D22DBA580005F1405 /* main.cpp */; };
+		BD7DDE8022DBA580005F1405 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = BD7DDE7F22DBA580005F1405 /* Makefile */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BD7DDE7A22DBA580005F1405 /* Index */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Index; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD7DDE7D22DBA580005F1405 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		BD7DDE7F22DBA580005F1405 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		BD7DDE8122DBA580005F1405 /* Doxyfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Doxyfile; sourceTree = "<group>"; };
+		BD7DDE8222DBA580005F1405 /* ReadMe.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+		BD7DDE8422DBA580005F1405 /* Glowdeck (Bluetooth).xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Glowdeck (Bluetooth).xcconfig"; path = "Configurations/Glowdeck (Bluetooth).xcconfig"; sourceTree = "<group>"; };
+		BD7DDE8522DBA580005F1405 /* Glowdeck (J-Link).xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Glowdeck (J-Link).xcconfig"; path = "Configurations/Glowdeck (J-Link).xcconfig"; sourceTree = "<group>"; };
+		BD7DDE8622DBA580005F1405 /* Glowdeck (USB).xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Glowdeck (USB).xcconfig"; path = "Configurations/Glowdeck (USB).xcconfig"; sourceTree = "<group>"; };
+		BD7DDE8722DBA580005F1405 /* Teensy 2.0.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Teensy 2.0.xcconfig"; path = "Configurations/Teensy 2.0.xcconfig"; sourceTree = "<group>"; };
+		BD7DDE8822DBA580005F1405 /* Teensy 3.0.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Teensy 3.0.xcconfig"; path = "Configurations/Teensy 3.0.xcconfig"; sourceTree = "<group>"; };
+		BD7DDE8922DBA580005F1405 /* Teensy 3.1.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Teensy 3.1.xcconfig"; path = "Configurations/Teensy 3.1.xcconfig"; sourceTree = "<group>"; };
+		BD7DDE8A22DBA580005F1405 /* Teensy 3.2.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Teensy 3.2.xcconfig"; path = "Configurations/Teensy 3.2.xcconfig"; sourceTree = "<group>"; };
+		BD7DDE8B22DBA580005F1405 /* Teensy 3.5.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Teensy 3.5.xcconfig"; path = "Configurations/Teensy 3.5.xcconfig"; sourceTree = "<group>"; };
+		BD7DDE8C22DBA580005F1405 /* Teensy 3.6.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Teensy 3.6.xcconfig"; path = "Configurations/Teensy 3.6.xcconfig"; sourceTree = "<group>"; };
+		BD7DDE8D22DBA580005F1405 /* Teensy LC.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "Teensy LC.xcconfig"; path = "Configurations/Teensy LC.xcconfig"; sourceTree = "<group>"; };
+		BD7DDE8E22DBA580005F1405 /* My Board.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = "My Board.xcconfig"; path = "Configurations/My Board.xcconfig"; sourceTree = "<group>"; };
+		BD7DDE8F22DBA580005F1405 /* Robot_32.ino */ = {isa = PBXFileReference; lastKnownFileType = text; path = Robot_32.ino; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		BD7DDE6422DBA580005F1405 = {
+			isa = PBXGroup;
+			children = (
+				BD7DDE7C22DBA580005F1405 /* Robot_32 */,
+				BD7DDE7B22DBA580005F1405 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BD7DDE7B22DBA580005F1405 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BD7DDE7A22DBA580005F1405 /* Index */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BD7DDE7C22DBA580005F1405 /* Robot_32 */ = {
+			isa = PBXGroup;
+			children = (
+				BD7DDE7D22DBA580005F1405 /* main.cpp */,
+				BD7DDE7F22DBA580005F1405 /* Makefile */,
+				BD7DDE8122DBA580005F1405 /* Doxyfile */,
+				BD7DDE8222DBA580005F1405 /* ReadMe.txt */,
+				BD7DDE8F22DBA580005F1405 /* Robot_32.ino */,
+				BD7DDE8322DBA580005F1405 /* Configurations */,
+			);
+			path = Robot_32;
+			sourceTree = "<group>";
+		};
+		BD7DDE8322DBA580005F1405 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				BD7DDE8422DBA580005F1405 /* Glowdeck (Bluetooth).xcconfig */,
+				BD7DDE8522DBA580005F1405 /* Glowdeck (J-Link).xcconfig */,
+				BD7DDE8622DBA580005F1405 /* Glowdeck (USB).xcconfig */,
+				BD7DDE8722DBA580005F1405 /* Teensy 2.0.xcconfig */,
+				BD7DDE8822DBA580005F1405 /* Teensy 3.0.xcconfig */,
+				BD7DDE8922DBA580005F1405 /* Teensy 3.1.xcconfig */,
+				BD7DDE8A22DBA580005F1405 /* Teensy 3.2.xcconfig */,
+				BD7DDE8B22DBA580005F1405 /* Teensy 3.5.xcconfig */,
+				BD7DDE8C22DBA580005F1405 /* Teensy 3.6.xcconfig */,
+				BD7DDE8D22DBA580005F1405 /* Teensy LC.xcconfig */,
+				BD7DDE8E22DBA580005F1405 /* My Board.xcconfig */,
+			);
+			name = Configurations;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		BD7DDE6922DBA580005F1405 /* Build */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "build -C \"$(PROJECT)\" -j";
+			buildConfigurationList = BD7DDE9222DBA580005F1405 /* Build configuration list for PBXLegacyTarget "Build" */;
+			buildPhases = (
+			);
+			buildToolPath = make;
+			dependencies = (
+			);
+			name = Build;
+			passBuildSettingsInEnvironment = 1;
+			productName = Build;
+		};
+		BD7DDE6A22DBA580005F1405 /* All */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "all -C \"$(PROJECT)\"";
+			buildConfigurationList = BD7DDE9522DBA580005F1405 /* Build configuration list for PBXLegacyTarget "All" */;
+			buildPhases = (
+			);
+			buildToolPath = make;
+			dependencies = (
+			);
+			name = All;
+			passBuildSettingsInEnvironment = 1;
+			productName = All;
+		};
+		BD7DDE6B22DBA580005F1405 /* Share */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "share -C \"$(PROJECT)\"";
+			buildConfigurationList = BD7DDE9822DBA580005F1405 /* Build configuration list for PBXLegacyTarget "Share" */;
+			buildPhases = (
+			);
+			buildToolPath = make;
+			dependencies = (
+			);
+			name = Share;
+			passBuildSettingsInEnvironment = 1;
+			productName = Share;
+		};
+		BD7DDE6C22DBA580005F1405 /* Style */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "style -C \"$(PROJECT)\"";
+			buildConfigurationList = BD7DDE9B22DBA580005F1405 /* Build configuration list for PBXLegacyTarget "Style" */;
+			buildPhases = (
+			);
+			buildToolPath = make;
+			dependencies = (
+			);
+			name = Style;
+			passBuildSettingsInEnvironment = 1;
+			productName = Style;
+		};
+		BD7DDE6D22DBA580005F1405 /* Document */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "document -C \"$(PROJECT)\"";
+			buildConfigurationList = BD7DDE9E22DBA580005F1405 /* Build configuration list for PBXLegacyTarget "Document" */;
+			buildPhases = (
+			);
+			buildToolPath = make;
+			dependencies = (
+			);
+			name = Document;
+			passBuildSettingsInEnvironment = 1;
+			productName = Document;
+		};
+		BD7DDE6E22DBA580005F1405 /* Distribute */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "distribute -C \"$(PROJECT)\"";
+			buildConfigurationList = BD7DDEA122DBA580005F1405 /* Build configuration list for PBXLegacyTarget "Distribute" */;
+			buildPhases = (
+			);
+			buildToolPath = make;
+			dependencies = (
+			);
+			name = Distribute;
+			passBuildSettingsInEnvironment = 1;
+			productName = Distribute;
+		};
+		BD7DDE6F22DBA580005F1405 /* Archive */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "archive -C \"$(PROJECT)\"";
+			buildConfigurationList = BD7DDEA422DBA580005F1405 /* Build configuration list for PBXLegacyTarget "Archive" */;
+			buildPhases = (
+			);
+			buildToolPath = make;
+			dependencies = (
+			);
+			name = Archive;
+			passBuildSettingsInEnvironment = 1;
+			productName = Archive;
+		};
+		BD7DDE7022DBA580005F1405 /* Unarchive */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "unarchive -C \"$(PROJECT)\"";
+			buildConfigurationList = BD7DDEA722DBA580005F1405 /* Build configuration list for PBXLegacyTarget "Unarchive" */;
+			buildPhases = (
+			);
+			buildToolPath = make;
+			dependencies = (
+			);
+			name = Unarchive;
+			passBuildSettingsInEnvironment = 1;
+			productName = Unarchive;
+		};
+		BD7DDE7122DBA580005F1405 /* Boards */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "boards -C \"$(PROJECT)\"";
+			buildConfigurationList = BD7DDEAA22DBA580005F1405 /* Build configuration list for PBXLegacyTarget "Boards" */;
+			buildPhases = (
+			);
+			buildToolPath = make;
+			dependencies = (
+			);
+			name = Boards;
+			passBuildSettingsInEnvironment = 1;
+			productName = Boards;
+		};
+		BD7DDE7222DBA580005F1405 /* Serial */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "serial -C \"$(PROJECT)\"";
+			buildConfigurationList = BD7DDEAD22DBA580005F1405 /* Build configuration list for PBXLegacyTarget "Serial" */;
+			buildPhases = (
+			);
+			buildToolPath = make;
+			dependencies = (
+			);
+			name = Serial;
+			passBuildSettingsInEnvironment = 1;
+			productName = Serial;
+		};
+		BD7DDE7322DBA580005F1405 /* Upload */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "upload -C \"$(PROJECT)\"";
+			buildConfigurationList = BD7DDEB022DBA580005F1405 /* Build configuration list for PBXLegacyTarget "Upload" */;
+			buildPhases = (
+			);
+			buildToolPath = make;
+			dependencies = (
+			);
+			name = Upload;
+			passBuildSettingsInEnvironment = 1;
+			productName = Upload;
+		};
+		BD7DDE7422DBA580005F1405 /* Clean */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "clean -C \"$(PROJECT)\"";
+			buildConfigurationList = BD7DDEB322DBA580005F1405 /* Build configuration list for PBXLegacyTarget "Clean" */;
+			buildPhases = (
+			);
+			buildToolPath = make;
+			dependencies = (
+			);
+			name = Clean;
+			passBuildSettingsInEnvironment = 1;
+			productName = Clean;
+		};
+		BD7DDE7522DBA580005F1405 /* Make */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "make -C \"$(PROJECT)\"";
+			buildConfigurationList = BD7DDEB622DBA580005F1405 /* Build configuration list for PBXLegacyTarget "Make" */;
+			buildPhases = (
+			);
+			buildToolPath = make;
+			dependencies = (
+			);
+			name = Make;
+			passBuildSettingsInEnvironment = 1;
+			productName = Make;
+		};
+		BD7DDE7622DBA580005F1405 /* Fast */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "fast -C \"$(PROJECT)\"";
+			buildConfigurationList = BD7DDEB922DBA580005F1405 /* Build configuration list for PBXLegacyTarget "Fast" */;
+			buildPhases = (
+			);
+			buildToolPath = make;
+			dependencies = (
+			);
+			name = Fast;
+			passBuildSettingsInEnvironment = 1;
+			productName = Fast;
+		};
+		BD7DDE7722DBA580005F1405 /* Debug */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "debug -C \"$(PROJECT)\"";
+			buildConfigurationList = BD7DDEBC22DBA580005F1405 /* Build configuration list for PBXLegacyTarget "Debug" */;
+			buildPhases = (
+			);
+			buildToolPath = make;
+			dependencies = (
+			);
+			name = Debug;
+			passBuildSettingsInEnvironment = 1;
+			productName = Debug;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXNativeTarget section */
+		BD7DDE7922DBA580005F1405 /* Index */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD7DDEBF22DBA580005F1405 /* Build configuration list for PBXNativeTarget "Index" */;
+			buildPhases = (
+				BD7DDE7822DBA580005F1405 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Index;
+			productName = Index;
+			productReference = BD7DDE7A22DBA580005F1405 /* Index */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BD7DDE6522DBA580005F1405 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Ruedi Heimlicher";
+				TargetAttributes = {
+					BD7DDE6922DBA580005F1405 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					BD7DDE6A22DBA580005F1405 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					BD7DDE6B22DBA580005F1405 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					BD7DDE6C22DBA580005F1405 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					BD7DDE6D22DBA580005F1405 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					BD7DDE6E22DBA580005F1405 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					BD7DDE6F22DBA580005F1405 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					BD7DDE7022DBA580005F1405 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					BD7DDE7122DBA580005F1405 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					BD7DDE7222DBA580005F1405 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					BD7DDE7322DBA580005F1405 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					BD7DDE7422DBA580005F1405 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					BD7DDE7522DBA580005F1405 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					BD7DDE7622DBA580005F1405 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					BD7DDE7722DBA580005F1405 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					BD7DDE7922DBA580005F1405 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = BD7DDE6822DBA580005F1405 /* Build configuration list for PBXProject "Robot_32" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = BD7DDE6422DBA580005F1405;
+			productRefGroup = BD7DDE7B22DBA580005F1405 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BD7DDE6922DBA580005F1405 /* Build */,
+				BD7DDE6A22DBA580005F1405 /* All */,
+				BD7DDE6B22DBA580005F1405 /* Share */,
+				BD7DDE6C22DBA580005F1405 /* Style */,
+				BD7DDE6D22DBA580005F1405 /* Document */,
+				BD7DDE6E22DBA580005F1405 /* Distribute */,
+				BD7DDE6F22DBA580005F1405 /* Archive */,
+				BD7DDE7022DBA580005F1405 /* Unarchive */,
+				BD7DDE7122DBA580005F1405 /* Boards */,
+				BD7DDE7222DBA580005F1405 /* Serial */,
+				BD7DDE7322DBA580005F1405 /* Upload */,
+				BD7DDE7422DBA580005F1405 /* Clean */,
+				BD7DDE7522DBA580005F1405 /* Make */,
+				BD7DDE7622DBA580005F1405 /* Fast */,
+				BD7DDE7722DBA580005F1405 /* Debug */,
+				BD7DDE7922DBA580005F1405 /* Index */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BD7DDE7822DBA580005F1405 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD7DDE8022DBA580005F1405 /* Makefile in Sources */,
+				BD7DDE7E22DBA580005F1405 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		BD7DDE9022DBA580005F1405 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD7DDE8A22DBA580005F1405 /* Teensy 3.2.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PATH = "$(PATH):$(PROJECT_DIR)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKETCHBOOK_DIR = "";
+			};
+			name = Debug;
+		};
+		BD7DDE9122DBA580005F1405 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PATH = "$(PATH):$(PROJECT_DIR)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKETCHBOOK_DIR = "";
+			};
+			name = Release;
+		};
+		BD7DDE9322DBA580005F1405 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 535FNG3TMM;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BD7DDE9422DBA580005F1405 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 535FNG3TMM;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BD7DDE9622DBA580005F1405 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 535FNG3TMM;
+			};
+			name = Debug;
+		};
+		BD7DDE9722DBA580005F1405 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 535FNG3TMM;
+			};
+			name = Release;
+		};
+		BD7DDE9922DBA580005F1405 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 535FNG3TMM;
+			};
+			name = Debug;
+		};
+		BD7DDE9A22DBA580005F1405 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 535FNG3TMM;
+			};
+			name = Release;
+		};
+		BD7DDE9C22DBA580005F1405 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 535FNG3TMM;
+			};
+			name = Debug;
+		};
+		BD7DDE9D22DBA580005F1405 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 535FNG3TMM;
+			};
+			name = Release;
+		};
+		BD7DDE9F22DBA580005F1405 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 535FNG3TMM;
+			};
+			name = Debug;
+		};
+		BD7DDEA022DBA580005F1405 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 535FNG3TMM;
+			};
+			name = Release;
+		};
+		BD7DDEA222DBA580005F1405 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 535FNG3TMM;
+			};
+			name = Debug;
+		};
+		BD7DDEA322DBA580005F1405 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 535FNG3TMM;
+			};
+			name = Release;
+		};
+		BD7DDEA522DBA580005F1405 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 535FNG3TMM;
+			};
+			name = Debug;
+		};
+		BD7DDEA622DBA580005F1405 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 535FNG3TMM;
+			};
+			name = Release;
+		};
+		BD7DDEA822DBA580005F1405 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 535FNG3TMM;
+			};
+			name = Debug;
+		};
+		BD7DDEA922DBA580005F1405 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 535FNG3TMM;
+			};
+			name = Release;
+		};
+		BD7DDEAB22DBA580005F1405 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 535FNG3TMM;
+			};
+			name = Debug;
+		};
+		BD7DDEAC22DBA580005F1405 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 535FNG3TMM;
+			};
+			name = Release;
+		};
+		BD7DDEAE22DBA580005F1405 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 535FNG3TMM;
+			};
+			name = Debug;
+		};
+		BD7DDEAF22DBA580005F1405 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 535FNG3TMM;
+			};
+			name = Release;
+		};
+		BD7DDEB122DBA580005F1405 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 535FNG3TMM;
+			};
+			name = Debug;
+		};
+		BD7DDEB222DBA580005F1405 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 535FNG3TMM;
+			};
+			name = Release;
+		};
+		BD7DDEB422DBA580005F1405 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 535FNG3TMM;
+			};
+			name = Debug;
+		};
+		BD7DDEB522DBA580005F1405 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 535FNG3TMM;
+			};
+			name = Release;
+		};
+		BD7DDEB722DBA580005F1405 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 535FNG3TMM;
+			};
+			name = Debug;
+		};
+		BD7DDEB822DBA580005F1405 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 535FNG3TMM;
+			};
+			name = Release;
+		};
+		BD7DDEBA22DBA580005F1405 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 535FNG3TMM;
+			};
+			name = Debug;
+		};
+		BD7DDEBB22DBA580005F1405 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 535FNG3TMM;
+			};
+			name = Release;
+		};
+		BD7DDEBD22DBA580005F1405 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 535FNG3TMM;
+			};
+			name = Debug;
+		};
+		BD7DDEBE22DBA580005F1405 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 535FNG3TMM;
+			};
+			name = Release;
+		};
+		BD7DDEC022DBA580005F1405 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 535FNG3TMM;
+			};
+			name = Debug;
+		};
+		BD7DDEC122DBA580005F1405 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 535FNG3TMM;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BD7DDE6822DBA580005F1405 /* Build configuration list for PBXProject "Robot_32" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD7DDE9022DBA580005F1405 /* Debug */,
+				BD7DDE9122DBA580005F1405 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD7DDE9222DBA580005F1405 /* Build configuration list for PBXLegacyTarget "Build" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD7DDE9322DBA580005F1405 /* Debug */,
+				BD7DDE9422DBA580005F1405 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD7DDE9522DBA580005F1405 /* Build configuration list for PBXLegacyTarget "All" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD7DDE9622DBA580005F1405 /* Debug */,
+				BD7DDE9722DBA580005F1405 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD7DDE9822DBA580005F1405 /* Build configuration list for PBXLegacyTarget "Share" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD7DDE9922DBA580005F1405 /* Debug */,
+				BD7DDE9A22DBA580005F1405 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD7DDE9B22DBA580005F1405 /* Build configuration list for PBXLegacyTarget "Style" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD7DDE9C22DBA580005F1405 /* Debug */,
+				BD7DDE9D22DBA580005F1405 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD7DDE9E22DBA580005F1405 /* Build configuration list for PBXLegacyTarget "Document" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD7DDE9F22DBA580005F1405 /* Debug */,
+				BD7DDEA022DBA580005F1405 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD7DDEA122DBA580005F1405 /* Build configuration list for PBXLegacyTarget "Distribute" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD7DDEA222DBA580005F1405 /* Debug */,
+				BD7DDEA322DBA580005F1405 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD7DDEA422DBA580005F1405 /* Build configuration list for PBXLegacyTarget "Archive" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD7DDEA522DBA580005F1405 /* Debug */,
+				BD7DDEA622DBA580005F1405 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD7DDEA722DBA580005F1405 /* Build configuration list for PBXLegacyTarget "Unarchive" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD7DDEA822DBA580005F1405 /* Debug */,
+				BD7DDEA922DBA580005F1405 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD7DDEAA22DBA580005F1405 /* Build configuration list for PBXLegacyTarget "Boards" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD7DDEAB22DBA580005F1405 /* Debug */,
+				BD7DDEAC22DBA580005F1405 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD7DDEAD22DBA580005F1405 /* Build configuration list for PBXLegacyTarget "Serial" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD7DDEAE22DBA580005F1405 /* Debug */,
+				BD7DDEAF22DBA580005F1405 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD7DDEB022DBA580005F1405 /* Build configuration list for PBXLegacyTarget "Upload" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD7DDEB122DBA580005F1405 /* Debug */,
+				BD7DDEB222DBA580005F1405 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD7DDEB322DBA580005F1405 /* Build configuration list for PBXLegacyTarget "Clean" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD7DDEB422DBA580005F1405 /* Debug */,
+				BD7DDEB522DBA580005F1405 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD7DDEB622DBA580005F1405 /* Build configuration list for PBXLegacyTarget "Make" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD7DDEB722DBA580005F1405 /* Debug */,
+				BD7DDEB822DBA580005F1405 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD7DDEB922DBA580005F1405 /* Build configuration list for PBXLegacyTarget "Fast" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD7DDEBA22DBA580005F1405 /* Debug */,
+				BD7DDEBB22DBA580005F1405 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD7DDEBC22DBA580005F1405 /* Build configuration list for PBXLegacyTarget "Debug" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD7DDEBD22DBA580005F1405 /* Debug */,
+				BD7DDEBE22DBA580005F1405 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD7DDEBF22DBA580005F1405 /* Build configuration list for PBXNativeTarget "Index" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD7DDEC022DBA580005F1405 /* Debug */,
+				BD7DDEC122DBA580005F1405 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BD7DDE6522DBA580005F1405 /* Project object */;
+}
