@@ -75,7 +75,7 @@ LiquidCrystal_I2C lcd(0x27,20,4);
 #define OSZIA_TOGG digitalWrite(OSZIA_PIN,!(digitalRead(OSZIA_PIN)));
 
 RF24 radio(RNF_CE_PIN, RNF_CSN_PIN);   // nRF24L01 (CE, CSN)
-const byte address[6] = "00001"; // Address
+const byte address[6] = "00001\0"; // Address
 
 const uint64_t pipe = 0xE8E8F0F0E1LL;
 
@@ -120,7 +120,7 @@ ADC *adc = new ADC(); // adc object
 
 
 
-
+volatile uint8_t nrfwritecounter = 0;
 
 volatile uint8_t loopstatus = 0;
 volatile uint8_t loopcounter = 0;
@@ -409,6 +409,9 @@ void setup()
    
    pinMode(LX_PIN, INPUT);
    pinMode(LY_PIN, INPUT);
+   pinMode(RX_PIN, INPUT);
+   pinMode(RY_PIN, INPUT);
+
    //NRF_init();
    
    // Define the radio communication
@@ -435,9 +438,10 @@ void setup()
       Serial.println("radio OK");
       radio.openWritingPipe(address);
       radio.setAutoAck(false);
+      radio.setChannel(108);
       radio.setDataRate(RF24_250KBPS);
       radio.setPALevel(RF24_PA_LOW);
-
+      radio.stopListening(); //start the radio Transmitter 
    }
    else
    {
@@ -470,58 +474,6 @@ void setup()
     0x0F: A: out B: in
     */
 
-   //mcp0.gpioPinMode(0x00FF); // A Ausgang, B Eingang
-   mcp0.gpioPinMode(0xFFFF); // alle input
-   
-   //mcp0.portPullup(0x00FF); 
-   mcp0.portPullup(0xFFFF);// alle HI
-   
-   mcp0.gpioPort(0xCC33);
-
-   
-   //EEPROM.begin();
-    
-   delay(100);
-   usbtask = 0;
-   adressearray[0] = LO;
-   adressearray[1] = HI;
-   adressearray[2] = LO;
-   adressearray[3] = OPEN;
-   
-   /*
-   speed = 0;
-   Serial.print("speed: ");
-   Serial.print(speed);
-   Serial.print("\n");
-   Serial.print("a: ");
-   Serial.print(speed & (1<<0));
-   Serial.print(" b: ");
-   Serial.print(speed & (1<<1));
-   Serial.print(" c: ");
-   Serial.print(speed & (1<<2));
-   Serial.print(" d: ");
-   Serial.print(speed & (1<<3));
-   Serial.print("\n");
-
-  // init_analog();
-   for (uint8_t i=0;i<4;i++)
-   {
-      Serial.print(" i: "); Serial.print(i);
-      Serial.print(" data: ");Serial.print(speed & (1<<i));
-      Serial.print("\n");
-      if (speed & (1<<i))
-      {
-         Serial.print("HI");
-         speedarray[i] = HI; 
-      }
-      else
-      {
-         Serial.print("LO");
-         speedarray[i] = LO; 
-      }
-      Serial.print("\n");
-   }
-    */
    aktualcommand = OPEN;
    
    
@@ -533,19 +485,20 @@ void setup()
    ADC_init();
    delay(100);
    Serial.print("setup: ");
+   /*
    lcd.init();
    lcd.backlight();
     lcd.setCursor(0,0);
     lcd.print("RC_NRF");
     _delay_ms(200);
-    
+    */
  }
 
 // Add loop code
 void loop()
 {
 #pragma mark mcp
-   if (sincemcp > 100)
+   if (sincemcp > 600)
    {
       sincemcp = 0;
          
@@ -573,7 +526,9 @@ void loop()
       }
       // Send the whole data from the structure to the receiver
       
-       radio.write(&data, sizeof(PacketData));
+       uint8_t erfolg = radio.write(&data, sizeof(PacketData));
+      Serial.print("write erfolg: ");
+      Serial.println(erfolg);
    }
 #pragma mark batteriespannung 
    if (sincebatteriespannung > 200)

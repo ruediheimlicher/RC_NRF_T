@@ -123,6 +123,8 @@ inline void RF24::beginTransaction()
     _SPI.beginTransaction(SPISettings(spi_speed, MSBFIRST, SPI_MODE0));
     #endif     // !defined(RF24_SPI_PTR)
 #endif         // defined (RF24_SPI_TRANSACTIONS)
+// https://forum.pjrc.com/threads/40499-Need-to-change-SPI-clock-rate-for-RF24-radio-modules-w-TMRh20-library
+   _SPI.beginTransaction(SPISettings(10000000, MSBFIRST, SPI_MODE0));
     csn(LOW);
 }
 

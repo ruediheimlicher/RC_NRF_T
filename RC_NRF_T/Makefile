@@ -55,7 +55,7 @@ USER_LIBS_LIST =  RF24
 # !!! Help: http://bit.ly/2juEP91
 # default = empty = all
 #
-LOCAL_LIBS_LIST = 0# RF24
+LOCAL_LIBS_LIST = # RF24
 
 # List core, application and user's libraries to be excluded
 # !!! Help: http://bit.ly/2AijUOI
